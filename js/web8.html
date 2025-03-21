@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment-8</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        #content {
+            border: 1px solid #ccc;
+            padding: 20px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        #image {
+            margin-top: 20px;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hover over the text below</h1>
+    <div id="content" onmouseover="changeContent()" onmouseout="resetContent()">
+        Place the cursor here to see something new!
+    </div>
+    <div>
+        <img id="image" src="web.png" alt="Placeholder">
+        <p id="info">This is the default content.</p>
+    </div>
+
+    <script>
+        function changeContent() {
+            // Change image and text on mouseover
+            document.getElementById("image").src = "web2.png";
+            document.getElementById("info").textContent = "Look! The content has changed!";
+        }
+
+        function resetContent() {
+            // Reset image and text on mouseout
+            document.getElementById("image").src = "web.png";
+            document.getElementById("info").textContent = "This is the default content.";
+        }
+    </script>
+</body>
+</html>
